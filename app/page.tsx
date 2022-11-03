@@ -1,6 +1,8 @@
 import { MessageForm } from "@/components/message-form"
 import { db } from "@/lib/db"
 
+export const revalidate = 0
+
 export default async function Page() {
   const messages = await db.message.findMany()
 
